@@ -1,6 +1,6 @@
 body {
 	font-family: 'Roboto', sans-serif;
-	background: #D7FFCF;
+	/*background: ;*/
 }
 
 .site {
@@ -38,7 +38,7 @@ form {
 }
 
 a {
-	color: #5cb85c;
+	color: palevioletred;
 	font-size: 20px;
 }
 
