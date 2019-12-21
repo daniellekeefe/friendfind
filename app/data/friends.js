@@ -1,5 +1,5 @@
 // array of objects (1-5 that will be summed and compared to the user input and help define BFF)
-let friendList = [{
+let friends = [{
         name: 'Danielle Keefe',
         photo: '',
         scores: ["2", "5", "4", "2", "1", "3", "5", "5", "3", "4"]

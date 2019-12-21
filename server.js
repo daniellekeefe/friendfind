@@ -1,19 +1,24 @@
-// Dependencies for various node packages
-let express = require("express");
-let path = require("path");
+// Dependencies
+var express = require("express");
+var bodyParser = require("body-parser");
+var path = require("path");
 
-let app = express();
-let port = process.env.PORT || 3000;
+var app = express();
 
+var PORT = process.env.PORT || 3000;
 
-//express MIDDLEWARE
-app.use(express.static('app/public'));//serves yorr static files
-app.use(express.urlencoded({extended:true}))//this parses url
-app.use(express.json())
+// For serving of static CSS
+app.use(express.static(__dirname + "/app/css"));
 
-//required routes 
-require('./app/routing/apiRoutes.js')(app);
-require('./app/routing/htmlRoutes')(app);
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.text());
+app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
-//console log to confirm we are able to listen on port 3000
-app.listen(port, () => console.log('listening on port %s', port));
+// API and HTML routes
+require("./app/routing/apiRoutes.js")(app);
+require("./app/routing/htmlRoutes.js")(app);
+
+app.listen(PORT, function() {
+	console.log("App listening on PORT: " + PORT);
+});
