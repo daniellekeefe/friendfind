@@ -38,7 +38,7 @@ form {
 }
 
 a {
-	color: palevioletred;
+	color: blue;
 	font-size: 20px;
 }
 
@@ -47,8 +47,8 @@ a {
 }
 
 #bestFriendPhoto {
-	max-width: 100%;
-	height: auto;
+	height: 400px;
+	width: 300px;
 }
 
 span {
