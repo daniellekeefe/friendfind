@@ -1,11 +1,11 @@
 // Dependencies
-var express = require("express");
-var bodyParser = require("body-parser");
-var path = require("path");
+let express = require("express");
+let bodyParser = require("body-parser");
+let path = require("path");
 
-var app = express();
+let app = express();
 
-var PORT = process.env.PORT || 3000;
+let PORT = process.env.PORT || 3000;
 
 // For serving of static CSS
 app.use(express.static(__dirname + "/app/css"));
